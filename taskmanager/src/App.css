@@ -1,0 +1,276 @@
+:root{
+  --basicPadding: 7px;
+  --midPadding: 15px;
+  --largePadding: 30px;
+  --basicMargin: 7px;
+  --basicBorder: 1px solid black;
+  --basicRadius: 7px;
+  --midRadius: 18px;
+  --logoColor: #08A0F7;
+  --compBackColor: #FFFFFF;
+  --backgroundColor: #EAEEF6;
+  --basicBoxShadow: 0 20px 60px -20px #203855;
+  --ContentBoxShadow: 0 20px 90px -45px #203855;
+  --compMargin: 20px;
+  --primaryGlass: rgba(8, 160, 247, 0.1);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./myFonts/Poppins/Poppins-Regular.ttf') format('truetype'); /* Regular weight */
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./myFonts/Poppins/Poppins-Bold.ttf') format('truetype'); /* Bold weight */
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./myFonts/Poppins/Poppins-Italic.ttf') format('truetype'); /* Italic version */
+  font-weight: 400;
+  font-style: italic;
+}
+
+.container{
+  width: auto;
+  min-height: calc((100vh) - 2px);
+  border: var(--basicBorder);
+  /* padding: var(--midPadding); */
+  color: black;
+  background-color: var(--backgroundColor);
+  font-family: 'Poppins', sans-serif;
+}
+
+.header{
+  width: auto;
+  height: 40px;
+  /* border: var(--basicBorder); */
+  padding: var(--basicPadding) var(--midPadding);
+  color: black;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: var(--basicRadius);
+  background-color: var(--compBackColor);
+  box-shadow: var(--basicBoxShadow);
+  margin: 20px;
+}
+
+.logoDiv{
+  width: 79px;
+  height: 30px;
+  /* border: var(--basicBorder); */
+  border-radius: var(--basicRadius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo{
+  width: 27px;
+  height: 27px;
+  /* border: var(--basicBorder); */
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: small;
+  background-color: var(--logoColor);
+  color: var(--compBackColor);
+}
+
+.logoText{
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  color: var(--logoColor);
+}
+
+.inp{
+  width: 626px;
+  height: auto;
+  border: var(--basicBorder);
+  padding: calc(var(--basicPadding) * 1.5) var(--largePadding);
+  outline: none;
+  border: none;
+  border-radius: var(--midRadius);
+  background-color: #F4F7FC;
+  color: #121212;
+  line-height: 12px;
+  letter-spacing: 0.5px;
+}
+
+.searchT{
+  width: auto;
+  height: auto;
+  padding: var(--basicPadding) var(--midPadding);
+  /* border: 1px solid #121212; */
+  text-transform: capitalize;
+  font-size: small;
+  border-radius: calc(var(--midRadius));  
+  color: var(--compBackColor);
+  font-weight: normal;
+  background-color: var(--logoColor);
+  cursor: pointer;
+  
+}
+
+.contentWraper{
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  /* border-radius: var(--basicRadius); */
+  margin: calc(var(--compMargin)*3) var(--compMargin);
+  /* padding: var(--midPadding); */
+  padding: 5px;
+  color: #121212;
+  /* background-color: var(--compBackColor); */
+  /* background-color: transparent; */
+  /* box-shadow: var(--basicBoxShadow); */
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  border-radius: var(--basicRadius);
+  /* margin: calc(var(--compMargin)*3) var(--compMargin); */
+  padding: var(--largePadding) var(--midPadding);
+  color: #121212;
+  background-color: var(--compBackColor);
+  box-shadow: var(--ContentBoxShadow);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+} 
+
+.taskCont{
+  width: 50%;
+}
+
+.statsCont{
+  width: 30%;
+}
+
+.lable{
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  display: inline;
+  padding: 0 var(--midPadding);
+  text-transform: capitalize;
+  /* font-weight: bold; */
+  margin: 5px;
+}
+
+
+
+.tasksList{
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  padding: 3px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+
+.taskItem{
+  width: auto;
+  height: auto;
+  border-bottom: 1px solid var(--backgroundColor);
+  padding: var(--basicPadding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.taskCircle{
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--logoColor);
+  border-radius: 100%;
+  background-color: var(--primaryGlass);
+  cursor: pointer;
+  /* background-image: url('./images/check3.png'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.taskCircle:hover{
+  background-color: rgba(8, 160, 247, 0.2);
+}
+
+.taskText{
+  width: 510px;
+  height: auto;
+  /* border: var(--basicBorder); */
+  padding: var(--basicPadding);
+  white-space: nowrap;     /* Prevent text from wrapping to the next line */
+  overflow: hidden;        /* Hide the overflow text */
+  text-overflow: ellipsis; /* Show the dots (...) for the hidden text */
+  font-size: small;
+}
+
+.taskCross{
+  width: 24px;
+  height: 24px;
+  /* border: var(--basicBorder); */
+  /* border-radius: 100%; */
+  background-image: url('./images/cross_2.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.9) contrast(1.5) opacity(0.5);
+  cursor: pointer;
+}
+
+.stat{
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  display: flex;
+  flex-direction: column;
+  padding: var(--basicPadding);
+}
+
+.statText{
+  padding: 0 var(--midPadding);
+  width: auto;
+  height: auto;
+  /* border: var(--basicBorder); */
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+  text-transform: capitalize;
+}
+
+.subStatText{
+  font-size: small;
+}
+
+.progressBar{
+  width: auto;
+  height: 9px;
+  /* border: var(--basicBorder); */
+  margin: var(--midPadding);
+  border-radius: var(--basicRadius);
+  background-color: var(--backgroundColor);
+
+}
+
